@@ -1,9 +1,17 @@
 <script>
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
-	import '@styles/reset.css';
 	import '@styles/global.scss';
 </script>
+
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css?family=Source%20Sans%20Pro:400,600,700,400italic,600italic,700italic"
+		rel="stylesheet"
+	/>
+</svelte:head>
 
 <div class="container">
 	<Header />

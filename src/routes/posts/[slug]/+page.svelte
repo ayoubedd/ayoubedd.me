@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Meta from '$lib/composables/Meta.svelte';
-	import type { PageData } from './$types';
-	import '$lib/styles/syntax-highlighting.css';
 	import Tags from '$lib/components/Tags.svelte';
+	import type { PageData } from './$types';
 
 	export let data: PageData;
 	const { content, title = '', description = '', tags } = data;
@@ -31,6 +30,24 @@
 		}
 		:global(a) {
 			text-decoration: underline;
+		}
+
+		:global(ul) {
+			list-style: inside;
+			margin-bottom: 1rem;
+		}
+		
+		:global(ol) {
+			list-style: inside decimal;
+			margin-bottom: 1rem;
+		}
+
+		:global(h2),
+		:global(h3),
+		:global(h4),
+		:global(h5),
+		:global(h6) {
+			margin-bottom: 1rem;
 		}
 
 		:global(h2)::before,

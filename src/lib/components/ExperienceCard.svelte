@@ -35,8 +35,6 @@
 
 <style lang="scss">
 	.card {
-		color: rgb(113, 113, 122);
-		background-color: rgb(250, 250, 250);
 		padding: 1.4rem;
 		border: 1px solid #ddd;
 		border-radius: 5px;

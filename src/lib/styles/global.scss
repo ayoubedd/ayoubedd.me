@@ -1,3 +1,6 @@
+@import './reset.css';
+@import './syntax-highlighting.css';
+
 :root {
 	--font-size-1: 1.1rem;
 	--font-size-2: 1.2rem;
@@ -6,33 +9,16 @@
 	--font-size-5: 2.074rem;
 	--font-size-6: 2.488rem;
 
-	--text-color: black;
-	--background: white;
+	--text-color: #242424;
+	--background: #F0EFF4;
+	--accent-color: #212121;
 }
 
 [theme='dark'] {
-	--text-color: white;
-	--background: black;
+	--text-color: #dad9e0;
+	--background: #121420;
+	--accent-color: #C5D5EA;
 }
-
-[theme='light'] {
-	--text-color: black;
-	--background: white;
-}
-
-// @media (prefers-color-scheme: dark) {
-// 	:root {
-// 		--text-color: white;
-// 		--background: black;
-// 	}
-// }
-
-// @media (prefers-color-scheme: light) {
-// 	:root {
-// 		--text-color: white;
-// 		--background: black;
-// 	}
-// }
 
 body {
 	background-color: var(--background);
@@ -59,8 +45,9 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Roboto', 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: 500;
+	color: var(--accent-color);
+	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 600;
 	font-style: normal;
 }
 
@@ -105,6 +92,66 @@ img {
 
 hr {
 	border: 0;
-	border-top: 2px solid #eee;
-	margin: 1rem 0;
+	border-top: 2px solid var(--text-color);
+	opacity: .5;
+	border-radius: 5px;
+	margin: 1rem 2rem;
+}
+
+::-moz-scrollbar {
+	width: 5px;
+	height: 6px;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 6px;
+}
+
+::-moz-scrollbar-button:start:decrement,
+::-moz-scrollbar-button:start:decrement {
+	height: 0px;
+	display: block;
+	background-color: black;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+	height: 0px;
+	display: block;
+	background-color: black;
+}
+
+::-moz-scrollbar-track-piece {
+	background-color: var(--background);
+	/*Global Track Peice(the slider noob.)*/
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: var(--background);
+	/*Global Track Peice(the slider noob.)*/
+}
+
+::-moz-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color: var(--accent-color);
+	/* Up/Down slider background*/
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color: var(--accent-color);
+	/* Up/Down slider background*/
+}
+
+::-moz-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color: var(--accent-color);
+	/* Side/Side slider background*/
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color: var(--accent-color);
+	/* Side/Side slider background*/
 }

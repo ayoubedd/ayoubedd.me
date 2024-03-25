@@ -21,7 +21,7 @@
 			</ul>
 		</nav>
 	</div>
-	<!-- <DarkModeButton /> -->
+	<DarkModeButton />
 </header>
 
 <style lang="scss">
@@ -34,11 +34,11 @@
 		margin-bottom: 2rem;
 
 		.author-name {
-			font-family: 'Roboto';
 			font-size: 2rem;
-			font-weight: 600;
-			letter-spacing: 0.4rem;
+			font-weight: 800;
+			letter-spacing: 0.3rem;
 			font-size: 3rem;
+			color: var(--accent-color);
 		}
 
 		nav {

@@ -18,7 +18,7 @@
 
 	$: {
 		if ($page.url.pathname == href || ($page.url.pathname.startsWith(href) && href != '/'))
-			attrs.style = 'font-weight: bold;';
+			attrs.style = 'font-weight: bold; color: var(--accent-color);';
 		else attrs.style = '';
 	}
 </script>
@@ -30,7 +30,7 @@
 <style lang="scss">
 	a {
 		text-decoration: none;
-		color: var(--text-color);
+		// color: var(--accent-color);
 
 		&:hover {
 			text-decoration: underline;

@@ -11,8 +11,6 @@ export async function getAllPosts() {
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>;
-			console.log({ file });
-			console.log({ meta: file.metadata });
 			const post = { slug, ...metadata } satisfies Post;
 			post.content = file.default;
 			if (post.draft == false) posts.push(post);
