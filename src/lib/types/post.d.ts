@@ -1,9 +1,10 @@
-export type Post = {
+export type Publication = {
 	title: string;
 	slug: string;
 	description: string;
 	tags: string[];
-	date: string;
+	publishDate: string;
+	modificationDate: string;
 	draft: boolean;
 	content: string;
 };

@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { author, routes } from 'siteConfig';
+	import { author, site } from 'siteConfig';
 	import Link from '$lib/components/Link.svelte';
 	import DarkModeButton from '$lib/components/ThemeToggleButton.svelte';
 
 	const fullName = `${author.name.first} ${author.name.last}`.toUpperCase();
+	const { routes } = site;
 </script>
 
 <header>

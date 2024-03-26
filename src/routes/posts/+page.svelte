@@ -21,7 +21,7 @@
 			url={'/posts/' + article.slug}
 			title={article.title}
 			description={article.description}
-			date={new Date(article.date)}
+			publishDate={new Date(article.publishDate)}
 		/>
 	{/each}
 </section>

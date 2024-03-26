@@ -1,13 +1,3 @@
-import ExperienceCard from '$lib/components/ExperienceCard.svelte';
-
-export const routes = [
-	{ url: '/', name: 'Home' },
-	{ url: '/posts', name: 'Blog' },
-	{ url: '/projects', name: 'Projects' },
-	{ url: '/resume', name: 'Resume' },
-	{ url: '/about', name: 'About' }
-];
-
 export const author = {
 	name: {
 		first: 'Ayoub',
@@ -63,78 +53,12 @@ export const author = {
 
 export const site = {
 	domain: 'www.ayoubedd.com',
-	title: 'Ayoub Eddaoudi'
+	title: 'Ayoub Eddaoudi',
+	routes: [
+		{ url: '/', name: 'Home' },
+		{ url: '/posts', name: 'Blog' },
+		{ url: '/projects', name: 'Projects' },
+		{ url: '/resume', name: 'Resume' },
+		{ url: '/about', name: 'About' }
+	]
 };
-
-export const articles = [
-	{
-		title: 'Wow hahah, wait ... ?',
-		url: '/',
-		date: new Date(),
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit non in quisquam. This is a example descriptionthis is a example description'
-	},
-	{
-		title: 'This is a blog post without a title',
-		url: '/',
-		date: new Date(),
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit non in quisquam. This is a example descriptionthis is a example description'
-	},
-	{
-		title: 'Wow hahah, wait ... ?',
-		url: '/',
-		date: new Date(),
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit non in quisquam. This is a example descriptionthis is a example description'
-	},
-	{
-		title: 'This is a blog post without a title',
-		url: '/',
-		date: new Date(),
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit non in quisquam. This is a example descriptionthis is a example description'
-	},
-	{
-		title: 'Wow hahah, wait ... ?',
-		url: '/',
-		date: new Date(),
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit non in quisquam. This is a example descriptionthis is a example description'
-	},
-	{
-		title: 'This is a blog post without a title',
-		url: '/',
-		date: new Date(),
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit non in quisquam. This is a example descriptionthis is a example description'
-	},
-	{
-		title: 'Wow hahah, wait ... ?',
-		url: '/',
-		date: new Date(),
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit non in quisquam. This is a example descriptionthis is a example description'
-	},
-	{
-		title: 'This is a blog post without a title',
-		url: '/',
-		date: new Date(),
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit non in quisquam. This is a example descriptionthis is a example description'
-	},
-	{
-		title: 'Wow hahah, wait ... ?',
-		url: '/',
-		date: new Date(),
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit non in quisquam. This is a example descriptionthis is a example description'
-	},
-	{
-		title: 'This is a blog post without a title',
-		url: '/',
-		date: new Date(),
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit non in quisquam. This is a example descriptionthis is a example description'
-	}
-];

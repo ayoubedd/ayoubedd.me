@@ -1,16 +1,14 @@
 <script lang="ts">
-	import Tags from './Tags.svelte';
-
 	export let title: string = '';
 	export let url: string = '/';
 	export let description: string = '';
-	export let date: Date;
+	export let publishDate: Date;
 </script>
 
 <article>
 	<a href={url}>
 		<div class="date-title_container">
-			<span>{date.toLocaleDateString()}</span>
+			<span>{publishDate.toLocaleDateString()}</span>
 			<h2>{title}</h2>
 		</div>
 		{#if description.length}

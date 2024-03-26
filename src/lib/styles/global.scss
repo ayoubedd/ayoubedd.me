@@ -10,14 +10,14 @@
 	--font-size-6: 2.488rem;
 
 	--text-color: #242424;
-	--background: #F0EFF4;
+	--background: #f0eff4;
 	--accent-color: #212121;
 }
 
 [theme='dark'] {
 	--text-color: #dad9e0;
 	--background: #121420;
-	--accent-color: #C5D5EA;
+	--accent-color: #c5d5ea;
 }
 
 body {
@@ -93,7 +93,7 @@ img {
 hr {
 	border: 0;
 	border-top: 2px solid var(--text-color);
-	opacity: .5;
+	opacity: 0.5;
 	border-radius: 5px;
 	margin: 1rem 2rem;
 }

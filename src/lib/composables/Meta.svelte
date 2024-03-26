@@ -17,8 +17,7 @@
 	const titleWithSuffix = siteTitle === title ? title : (title ? title + ' | ' : '') + siteTitle;
 	const fullURI = `${domain}${path}`;
 
-
-	const schema =`<script type="application/ld+json">
+	const schema = `<script type="application/ld+json">
 	{
         "@context": "https://schema.org/",
         "@type": "BlogPosting",
@@ -55,7 +54,6 @@
             "Library of Congress"
         ],
 	}</script\>`;
-
 </script>
 
 <svelte:head>

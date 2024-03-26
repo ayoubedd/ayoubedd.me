@@ -36,7 +36,7 @@
 			list-style: inside;
 			margin-bottom: 1rem;
 		}
-		
+
 		:global(ol) {
 			list-style: inside decimal;
 			margin-bottom: 1rem;
