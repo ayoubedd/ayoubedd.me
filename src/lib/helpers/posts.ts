@@ -3,8 +3,7 @@ import type { Publication } from '$lib/types/post';
 let posts: Publication[] = [];
 
 export async function getAllPosts() {
-	if (posts.length)
-		return posts;
+	if (posts.length) return posts;
 
 	let posts_list: Publication[] = [];
 
@@ -24,16 +23,15 @@ export async function getAllPosts() {
 	}
 
 	posts_list = posts_list.sort(
-		(first, second) => new Date(second.publishDate).getTime() - new Date(first.publishDate).getTime()
+		(first, second) =>
+			new Date(second.publishDate).getTime() - new Date(first.publishDate).getTime()
 	);
 
 	return posts_list;
 }
 
-
 export async function getPost(slug: string) {
-	if (!posts.length)
-		posts = await getAllPosts();
+	if (!posts.length) posts = await getAllPosts();
 
 	for (const post of posts) {
 		if (post.slug === slug) return post;

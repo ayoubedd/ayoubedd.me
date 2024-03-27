@@ -35,25 +35,18 @@
 
 <section>
 	<h2>Recent posts</h2>
-	{#each data.posts as article}
-		<PostCard {...article} 
+	{#each data.articles as article}
+		<PostCard
+			url={`/posts/${article.slug}`}
+			title={article.title}
 			publishDate={new Date(article.publishDate)}
-			description=""
 		/>
 	{/each}
 </section>
 
-<!-- {#if author.experience}
-	<section>
-		<h2>Experience</h2>
-		{#each author.experience as experience}
-			<ExperienceCard {...experience} />
-		{/each}
-	</section>
-{/if} -->
-
 <section>
 	<h2>Projects</h2>
+
 	<ProjectCard
 		title="SvelteKit"
 		description="SvelteKit is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing."

@@ -18,7 +18,8 @@
 
 		let theme;
 
-		const storedTheme: 'light' | 'dark' = localStorage.getItem('theme') || 'light';
+		const storedTheme: 'light' | 'dark' =
+			(localStorage.getItem('theme') as 'dark' | 'light') || 'light';
 		theme = ['light', 'dark'].includes(storedTheme) ? storedTheme : 'light';
 
 		currentTheme.set(theme);
