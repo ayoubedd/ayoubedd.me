@@ -8,3 +8,11 @@ export type Publication = {
 	draft: boolean;
 	content: string;
 };
+
+export type Project = {
+	title: string;
+	link: string;
+	description: string;
+	publishDate: string;
+	image: string;
+};

@@ -1,4 +1,4 @@
-import type { Publication } from '$lib/types/post';
+import type { Publication } from '$lib/types/main';
 
 let posts: Publication[] = [];
 

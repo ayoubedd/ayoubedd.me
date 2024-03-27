@@ -45,24 +45,25 @@
 </section>
 
 <section>
-	<h2>Projects</h2>
-
-	<ProjectCard
-		title="SvelteKit"
-		description="SvelteKit is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing."
-		link="https://kit.svelte.dev"
-		img="https://kit.svelte.dev/og.png"
-	/>
-	<ProjectCard
-		title="SvelteKit"
-		description="SvelteKit is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing."
-		link="https://kit.svelte.dev"
-		img="https://kit.svelte.dev/og.png"
-	/>
+	<div class="meta">
+		<h2>Projects</h2>
+		<p class="description">Recent projects i enjoyed working on, check them out.</p>
+	</div>
+	{#each data.projects as project}
+		<ProjectCard
+			link={project.link}
+			title={project.title}
+			img={project.image}
+			description={project.description}
+		/>
+	{/each}
 </section>
 
 <style lang="scss">
 	section {
+		.meta {
+			margin-bottom: 1.5rem;
+		}
 		margin-bottom: 4rem;
 
 		h1 {
@@ -70,8 +71,8 @@
 		}
 
 		h2 {
-			margin-bottom: 0.8rem;
 			font-weight: 400;
+			margin-bottom: 0.6rem;
 			text-transform: capitalize;
 		}
 

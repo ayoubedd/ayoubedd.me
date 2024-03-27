@@ -2,22 +2,17 @@
 	import Link from './Link.svelte';
 
 	export let title: string;
-	export let img: string = '';
+	export let img: string = '/images/placeholder.webp';
 	export let description: string;
 	export let link: string;
 </script>
 
 <div class="card">
-	{#if img}
-		<div class="image">
-			<Link href={link}>
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Labrador_Retriever_portrait.jpg/1200px-Labrador_Retriever_portrait.jpg"
-					alt=""
-				/>
-			</Link>
-		</div>
-	{/if}
+	<div class="image">
+		<Link href={link}>
+			<img src={img} alt={title} />
+		</Link>
+	</div>
 	<div class="meta-data {img.length == 0 ? 'full-w' : ''}">
 		<Link href={link}>
 			<h2>{title}</h2>
