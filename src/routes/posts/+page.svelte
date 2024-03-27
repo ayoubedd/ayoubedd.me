@@ -1,13 +1,13 @@
 <script lang="ts">
 	import PostCard from '$lib/components/PostCard.svelte';
+	import Meta from '$lib/composables/Meta.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 </script>
 
 <svelte:head>
-	<title>Posts</title>
-	<meta name="description" content="Blog posts about various things" />
+	<Meta title="Posts" description="Blog posts about various things" />
 </svelte:head>
 
 <section>

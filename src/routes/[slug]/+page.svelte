@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Meta from '$lib/composables/Meta.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -6,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<Meta {title} description="Blog posts about various things" />
 </svelte:head>
 
 <div>

@@ -1,10 +1,10 @@
 <script lang="ts">
 	import ExperienceCard from '$lib/components/ExperienceCard.svelte';
+	import Meta from '$lib/composables/Meta.svelte';
 </script>
 
 <svelte:head>
-	<title>Resume</title>
-	<meta name="description" content="My education and experience as a software developer" />
+	<Meta title="Resume" description="My education and experience as a software developer" />
 </svelte:head>
 
 ## Education
@@ -18,13 +18,12 @@ developer and prepared me for real-world challenges in the industry.
 
 ## Experiencel
 
-I have experience
-working as a software developer intern at a tech company, where I developed and maintained software
-systems, troubleshooted technical issues, and collaborated with a team of professionals. This
-opportunity allowed me to apply my coding skills in a professional setting, gain exposure to
-industry best practices, and learn from experienced developers. I also had the chance to work on
-real-world projects, contribute to team meetings, and participate in code reviews, enhancing my
-understanding of software development processes and teamwork.
+I have experience working as a software developer intern at a tech company, where I developed and
+maintained software systems, troubleshooted technical issues, and collaborated with a team of
+professionals. This opportunity allowed me to apply my coding skills in a professional setting, gain
+exposure to industry best practices, and learn from experienced developers. I also had the chance to
+work on real-world projects, contribute to team meetings, and participate in code reviews, enhancing
+my understanding of software development processes and teamwork.
 
 <ExperienceCard
 	title="Software Developer Intern"

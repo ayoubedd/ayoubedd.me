@@ -14,7 +14,7 @@
 	export let domain = site.domain;
 	export let siteTitle = site.title;
 
-	const titleWithSuffix = siteTitle === title ? title : (title ? title + ' | ' : '') + siteTitle;
+	const titleWithSuffix = siteTitle === title ? title : (title ? title + ' • ' : '') + siteTitle;
 	const fullURI = `${domain}${path}`;
 
 	const schema = `<script type="application/ld+json">
