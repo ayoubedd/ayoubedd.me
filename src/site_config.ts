@@ -18,10 +18,6 @@ export const author = {
 			name: 'Linkedin',
 			url: 'https://www.linkedin.com/in/ayoubeddaouddi'
 		},
-		{
-			name: 'Twitter',
-			url: 'https://twitter.com'
-		}
 		// {
 		// 	name: 'GPG',
 		// 	url: '/GPG.key'
