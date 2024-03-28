@@ -33,31 +33,36 @@
 	</p>
 </section>
 
-<section>
-	<h2>Recent posts</h2>
-	{#each data.articles as article}
-		<PostCard
-			url={`/posts/${article.slug}`}
-			title={article.title}
-			publishDate={new Date(article.publishDate)}
-		/>
-	{/each}
-</section>
+{#if data.articles?.length}
+	<section>
+		<h2>Recent posts</h2>
+		{#each data.articles as article}
+			<PostCard
+				url={`/posts/${article.slug}`}
+				title={article.title}
+				publishDate={new Date(article.publishDate)}
+			/>
+		{/each}
+	</section>
+{/if}
 
-<section>
-	<div class="meta">
-		<h2>Projects</h2>
-		<p class="description">Recent projects i enjoyed working on, check them out.</p>
-	</div>
-	{#each data.projects as project}
-		<ProjectCard
-			link={project.link}
-			title={project.title}
-			img={project.image}
-			description={project.description}
-		/>
-	{/each}
-</section>
+
+{#if data.projects?.length}
+	<section>
+		<div class="meta">
+			<h2>Projects</h2>
+			<p class="description">Recent projects i enjoyed working on, check them out.</p>
+		</div>
+		{#each data.projects as project}
+			<ProjectCard
+				link={project.link}
+				title={project.title}
+				img={project.image}
+				description={project.description}
+			/>
+		{/each}
+	</section>
+{/if}
 
 <style lang="scss">
 	section {
