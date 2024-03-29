@@ -1,6 +1,6 @@
 import type { Project } from '$lib/types/main';
 
-let projects: Project[] = [];
+const projects: Project[] = [];
 
 export async function getAllProjets() {
 	if (projects.length) return projects;
