@@ -15,4 +15,5 @@ export type Project = {
 	description: string;
 	publishDate: string;
 	image: string;
+	draft: boolean;
 };

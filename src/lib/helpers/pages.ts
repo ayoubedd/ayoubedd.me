@@ -1,4 +1,4 @@
-import type { Publication } from '$lib/types/post';
+import type { Publication } from '$lib/types/main';
 
 let pages: Publication[] = [];
 
@@ -7,7 +7,7 @@ async function getAllPages() {
 
 	let posts: Publication[] = [];
 
-	const paths = await import.meta.glob('/content/pages/*.md', { eager: true });
+	const paths = import.meta.glob('/content/pages/*.md', { eager: true });
 
 	for (const path in paths) {
 		const file = paths[path];

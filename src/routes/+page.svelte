@@ -33,42 +33,40 @@
 	</p>
 </section>
 
-{#if data.articles?.length}
-	<section>
-		<h2>Recent posts</h2>
-		{#each data.articles as article}
-			<PostCard
-				url={`/posts/${article.slug}`}
-				title={article.title}
-				publishDate={new Date(article.publishDate)}
-			/>
-		{/each}
-	</section>
-{/if}
+<section>
+	<h2>Recent posts</h2>
+	{#if !data.articles?.length}
+		<span>No posts yet :)</span>
+	{/if}
 
+	{#each data.articles as article}
+		<PostCard
+			url={`/posts/${article.slug}`}
+			title={article.title}
+			publishDate={new Date(article.publishDate)}
+		/>
+	{/each}
+</section>
 
-{#if data.projects?.length}
-	<section>
-		<div class="meta">
-			<h2>Projects</h2>
-			<p class="description">Recent projects i enjoyed working on, check them out.</p>
-		</div>
-		{#each data.projects as project}
-			<ProjectCard
-				link={project.link}
-				title={project.title}
-				img={project.image}
-				description={project.description}
-			/>
-		{/each}
-	</section>
-{/if}
+<section>
+	<h2>Projects</h2>
+
+	{#if !data.projects?.length}
+		<span>No projects yet :)</span>
+	{/if}
+
+	{#each data.projects as project}
+		<ProjectCard
+			link={project.link}
+			title={project.title}
+			img={project.image}
+			description={project.description}
+		/>
+	{/each}
+</section>
 
 <style lang="scss">
 	section {
-		.meta {
-			margin-bottom: 1.5rem;
-		}
 		margin-bottom: 4rem;
 
 		h1 {
@@ -77,7 +75,7 @@
 
 		h2 {
 			font-weight: 400;
-			margin-bottom: 0.6rem;
+			margin-bottom: 0.5rem;
 			text-transform: capitalize;
 		}
 

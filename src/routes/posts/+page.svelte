@@ -16,6 +16,10 @@
 		<p>Blog posts about various things</p>
 	</div>
 
+	{#if !data.posts.length}
+		<span>No posts yet :)</span>
+	{/if}
+
 	{#each data.posts as article}
 		<PostCard
 			url={'/posts/' + article.slug}

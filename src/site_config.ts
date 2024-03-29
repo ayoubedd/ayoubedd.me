@@ -17,7 +17,7 @@ export const author = {
 		{
 			name: 'Linkedin',
 			url: 'https://www.linkedin.com/in/ayoubeddaouddi'
-		},
+		}
 		// {
 		// 	name: 'GPG',
 		// 	url: '/GPG.key'

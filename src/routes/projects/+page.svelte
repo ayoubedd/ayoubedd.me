@@ -17,6 +17,11 @@
 		<h1>Projects</h1>
 		<p>Projects i enjoyed working on, and worth sharing with the world</p>
 	</div>
+
+	{#if !data.projects.length}
+		<span>No projects yet :)</span>
+	{/if}
+
 	{#each data.projects as project}
 		<ProjectCard link={project.link} title={project.title} description={project.description} />
 	{/each}
