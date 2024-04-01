@@ -59,6 +59,8 @@
 <svelte:head>
 	{@html schema}
 
+	<meta name="robots" content="noindex" />
+
 	<meta property="og:type" content={type} />
 	<meta property="og:url" content={fullURI} />
 	<meta property="twitter:url" content={fullURI} />
