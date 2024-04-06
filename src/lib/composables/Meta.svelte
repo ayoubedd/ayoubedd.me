@@ -8,7 +8,7 @@
 
 	export let title: string;
 	export let description: string;
-	export let image = '/img/default.jpg';
+	export let image = '/images/placeholder.webp';
 
 	export let path = $page.url.pathname;
 	export let domain = site.domain;
