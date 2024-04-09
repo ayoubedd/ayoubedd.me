@@ -48,7 +48,7 @@ export const author = {
 };
 
 export const site = {
-	domain: 'ayoubedd.com',
+	domain: 'https://ayoubedd.me',
 	title: 'Ayoub Eddaoudi',
 	routes: [
 		{ url: '/', name: 'Home' },
