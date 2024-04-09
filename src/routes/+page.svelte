@@ -9,9 +9,7 @@
 	export let data: PageData;
 </script>
 
-<svelte:head>
-	<Meta title={author.name.full} description={author.description} />
-</svelte:head>
+<svelte:component this={Meta} title={author.name.full} description={author.description} />
 
 <section>
 	<h1>Hello y'all 👋</h1>

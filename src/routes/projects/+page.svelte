@@ -5,12 +5,11 @@
 	export let data: PageData;
 </script>
 
-<svelte:head>
-	<Meta
-		title="Projects"
-		description="Projects i enjoyed working on, and worth sharing with the world"
-	/>
-</svelte:head>
+<svelte:component
+	this={Meta}
+	title="Projects"
+	description="Projects i enjoyed working on, and worth sharing with the world"
+/>
 
 <section>
 	<div class="brief">

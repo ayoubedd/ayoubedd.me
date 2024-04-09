@@ -4,9 +4,7 @@
 	import { author } from 'siteConfig';
 </script>
 
-<svelte:head>
-	<Meta title="Resume" description="My education and experience as a software developer" />
-</svelte:head>
+<svelte:component this={Meta} title="Resume" description="My education and experience as a software developer" />
 
 ## Education
 

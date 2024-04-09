@@ -7,9 +7,7 @@
 	const { content, title = '', description = '', tags } = data;
 </script>
 
-<svelte:head>
-	<Meta {title} {description} type="article" />
-</svelte:head>
+<svelte:component this={Meta} {title} {description} type="article" />
 
 <article class="post">
 	<div class="title-tags_container">

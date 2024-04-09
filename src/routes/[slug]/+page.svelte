@@ -6,9 +6,7 @@
 	const { content, title } = data;
 </script>
 
-<svelte:head>
-	<Meta {title} description="Blog posts about various things" />
-</svelte:head>
+<svelte:component this={Meta} {title} description="Blog posts about various things" />
 
 <div>
 	<h1>{title}</h1>

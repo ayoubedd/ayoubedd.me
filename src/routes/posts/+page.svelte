@@ -6,9 +6,7 @@
 	export let data: PageData;
 </script>
 
-<svelte:head>
-	<Meta title="Posts" description="Blog posts about various things" />
-</svelte:head>
+<svelte:component this={Meta} title="Posts" description="Blog posts about various things" />
 
 <section>
 	<div class="breif">
