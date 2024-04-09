@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { site } from 'siteConfig';
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 
 	export let href: string;
 	export const attrs: any = {};
 
 	try {
 		if (
-			new URL(href.startsWith('/') ? 'http://' + site.domain + href : href).host !== site.domain
+			new URL(href.startsWith('/') ? site.domain + href : href).hostname !== (new URL(site.domain)).hostname
 		) {
 			attrs.rel = 'nofollow';
 			attrs.target = '_blank';
