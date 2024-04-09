@@ -22,7 +22,12 @@
 	{/if}
 
 	{#each data.projects as project}
-		<ProjectCard link={project.link} title={project.title} description={project.description} />
+		<ProjectCard
+			link={project.link}
+			title={project.title}
+			description={project.description}
+			img={project.image}
+		/>
 	{/each}
 </section>
 
