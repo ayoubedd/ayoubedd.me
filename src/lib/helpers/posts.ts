@@ -7,7 +7,7 @@ export async function getAllPosts() {
 
 	let posts_list: Publication[] = [];
 
-	const paths = import.meta.glob('/content/posts/*.md', { eager: true });
+	const paths = import.meta.glob('@content/posts/*.md', { eager: true });
 
 	for (const path in paths) {
 		const file = paths[path];

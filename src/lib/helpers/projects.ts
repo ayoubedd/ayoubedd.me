@@ -7,7 +7,7 @@ export async function getAllProjets() {
 
 	let list: Project[] = [];
 
-	const paths = import.meta.glob('/content/projects/*.md', { eager: true });
+	const paths = import.meta.glob('@content/projects/*.md', { eager: true });
 
 	for (const path in paths) {
 		const file = paths[path];

@@ -7,7 +7,7 @@ async function getAllPages() {
 
 	let posts: Publication[] = [];
 
-	const paths = import.meta.glob('/content/pages/*.md', { eager: true });
+	const paths = import.meta.glob('@content/pages/*.md', { eager: true });
 
 	for (const path in paths) {
 		const file = paths[path];
