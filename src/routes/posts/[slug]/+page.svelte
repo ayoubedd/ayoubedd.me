@@ -32,12 +32,14 @@
 
 		:global(ul) {
 			list-style: inside;
-			margin-bottom: 1rem;
+			margin-left: 1rem;
+			margin-bottom: 0.5rem;
 		}
 
 		:global(ol) {
 			list-style: inside decimal;
-			margin-bottom: 1rem;
+			margin-left: 1rem;
+			margin-bottom: 0.5rem;
 		}
 
 		:global(h2),

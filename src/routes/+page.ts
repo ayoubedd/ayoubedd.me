@@ -6,8 +6,8 @@ import type { PageLoad } from './$types';
 export const load: PageLoad = () => {
 	try {
 		return {
-			articles: (getAllPosts()).slice(0, 5),
-			projects: (getAllProjects()).slice(0, 5)
+			articles: getAllPosts().slice(0, 5),
+			projects: getAllProjects().slice(0, 5)
 		};
 	} catch (_e) {
 		error(404);

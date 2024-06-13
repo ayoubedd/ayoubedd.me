@@ -12,7 +12,7 @@ function fillPublications(paths: any[], pubs: Publication[]) {
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Publication, 'slug'>;
 			const post = { slug, ...metadata } satisfies Publication;
-			// @ts-ignore
+			// "@ts-expect-error"
 			post.content = file.default;
 			if (post.draft == false) pubs.push(post);
 		}
@@ -22,23 +22,25 @@ function fillPublications(paths: any[], pubs: Publication[]) {
 function loadPublications() {
 	if (posts.length) return posts;
 
-	const list: { paths: any[], target: Publication[] }[] = [
+	const list: { paths: any[]; target: Publication[] }[] = [
 		{
+			// @ts-ignore: ok
 			paths: import.meta.glob('@content/posts/*.md', { eager: true }),
 			target: posts
 		},
 		{
+			// @ts-ignore: ok
 			paths: import.meta.glob('@content/pages/*.md', { eager: true }),
 			target: pages
 		},
 		{
+			// @ts-ignore: ok
 			paths: import.meta.glob('@content/projects/*.md', { eager: true }),
 			target: projects
-		},
+		}
 	];
 
-	for (const pair of list)
-		fillPublications(pair.paths, pair.target);
+	for (const pair of list) fillPublications(pair.paths, pair.target);
 
 	for (const pair of list)
 		pair.target = pair.target.sort(
@@ -47,7 +49,7 @@ function loadPublications() {
 		);
 }
 
-export function getPost(slug: string) : Publication | undefined {
+export function getPost(slug: string): Publication | undefined {
 	if (!posts.length) loadPublications();
 
 	for (const post of posts) {
@@ -57,12 +59,12 @@ export function getPost(slug: string) : Publication | undefined {
 	return undefined;
 }
 
-export function getAllPosts() : Publication[] {
+export function getAllPosts(): Publication[] {
 	if (!posts.length) loadPublications();
 	return posts;
 }
 
-export function getProject(slug: string) : Publication | undefined {
+export function getProject(slug: string): Publication | undefined {
 	if (!projects.length) loadPublications();
 
 	for (const project of projects) {
@@ -72,12 +74,12 @@ export function getProject(slug: string) : Publication | undefined {
 	return undefined;
 }
 
-export function getAllProjects() : Publication[] {
+export function getAllProjects(): Publication[] {
 	if (!projects.length) loadPublications();
 	return projects;
 }
 
-export function getPage(slug: string) : Publication | undefined {
+export function getPage(slug: string): Publication | undefined {
 	if (!pages.length) loadPublications();
 
 	for (const page of pages) {

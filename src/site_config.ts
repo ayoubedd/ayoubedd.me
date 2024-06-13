@@ -13,7 +13,7 @@ export const author = {
 		{
 			name: 'Github',
 			url: 'https://github.com/ayoubedd'
-		},
+		}
 		// {
 		// 	name: 'GPG',
 		// 	url: '/GPG.key'
