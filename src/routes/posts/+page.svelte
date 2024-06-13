@@ -9,7 +9,7 @@
 <svelte:component this={Meta} title="Posts" description="Blog posts about various things" />
 
 <section>
-	<div class="breif">
+	<div class="brief">
 		<h1>Posts</h1>
 		<p>Blog posts about various things</p>
 	</div>
@@ -29,7 +29,7 @@
 </section>
 
 <style lang="scss">
-	.breif {
+	.brief {
 		margin-bottom: 2rem;
 		h1 {
 			font-size: 2.2rem;

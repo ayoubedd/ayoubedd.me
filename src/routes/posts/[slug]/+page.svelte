@@ -47,15 +47,5 @@
 		:global(h6) {
 			margin-bottom: 1rem;
 		}
-
-		:global(h2)::before,
-		:global(h3)::before,
-		:global(h4)::before,
-		:global(h5)::before,
-		:global(h6)::before {
-			content: '#';
-			margin-right: 0.6rem;
-			opacity: 0.5;
-		}
 	}
 </style>

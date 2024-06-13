@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import { getPage } from '$lib/helpers/pages';
+import { getPage } from '$lib/helpers/content';
 
 export const load: PageLoad = async ({ params }) => {
 	try {

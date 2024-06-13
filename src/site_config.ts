@@ -14,10 +14,6 @@ export const author = {
 			name: 'Github',
 			url: 'https://github.com/ayoubedd'
 		},
-		{
-			name: 'Linkedin',
-			url: 'https://www.linkedin.com/in/ayoubeddaouddi'
-		}
 		// {
 		// 	name: 'GPG',
 		// 	url: '/GPG.key'

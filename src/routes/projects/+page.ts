@@ -1,11 +1,11 @@
 import { error } from '@sveltejs/kit';
-import { getAllProjets } from '$lib/helpers/projects';
+import { getAllProjects } from '$lib/helpers/content';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = async () => {
+export const load: PageLoad = () => {
 	try {
-		return { projects: await getAllProjets() };
-	} catch (e) {
+		return { projects: getAllProjects() };
+	} catch (_e) {
 		error(404);
 	}
 };
