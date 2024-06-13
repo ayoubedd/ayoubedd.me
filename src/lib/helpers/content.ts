@@ -22,10 +22,6 @@ function fillPublications(paths: any[], pubs: Publication[]) {
 function loadPublications() {
 	if (posts.length) return posts;
 
-	const posts_paths: any[] = import.meta.glob('@content/posts/*.md', { eager: true });
-	const pages_paths: any[] = import.meta.glob('@content/pages/*.md', { eager: true });
-	const projects_paths: any[] = import.meta.glob('@content/projects/*.md', { eager: true });
-
 	const list: { paths: any[], target: Publication[] }[] = [
 		{
 			paths: import.meta.glob('@content/posts/*.md', { eager: true }),
