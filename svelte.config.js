@@ -2,6 +2,7 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import remarkHeadingId from 'remark-heading-id';
+import remarkToc from 'remark-toc';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,7 +12,10 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.svelte', '.md'],
-			remarkPlugins: [[remarkHeadingId, { defaults: true }]]
+			remarkPlugins: [
+				[remarkHeadingId, { defaults: true }],
+				[remarkToc, { ordered: true, tight: true }]
+			]
 		})
 	],
 
