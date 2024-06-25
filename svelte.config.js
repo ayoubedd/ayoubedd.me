@@ -3,6 +3,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import remarkHeadingId from 'remark-heading-id';
 import remarkToc from 'remark-toc';
+import remarkUnwrapImages from 'remark-unwrap-images'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,7 +15,8 @@ const config = {
 			extensions: ['.svelte', '.md'],
 			remarkPlugins: [
 				[remarkHeadingId, { defaults: true }],
-				[remarkToc, { ordered: true, tight: true }]
+				[remarkToc, { ordered: true, tight: true }],
+				[remarkUnwrapImages, {}]
 			]
 		})
 	],

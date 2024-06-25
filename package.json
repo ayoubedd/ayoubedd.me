@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "vite build && jampack ./build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -12,6 +12,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@divriots/jampack": "^0.24.4",
 		"@sveltejs/adapter-auto": "^3.2.1",
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/kit": "^2.5.10",
@@ -35,6 +36,7 @@
 	"type": "module",
 	"dependencies": {
 		"remark-heading-id": "^1.0.1",
-		"remark-toc": "^9.0.0"
+		"remark-toc": "^9.0.0",
+		"remark-unwrap-images": "^4.0.0"
 	}
 }
